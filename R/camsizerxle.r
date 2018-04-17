@@ -1,3 +1,14 @@
+#' Read in data from CAMSIZER machine output
+#'
+#' \code{camsizerxle} provides a tool to read in xle data as output by te CAMSIZER and export it as a more common csv or rda file format.
+#' @param path is the path where the CAMSIZER data is stored.
+#' @param outpath is where you want the new data to go.
+#' @param outfile is the name of the output file.
+#' @return saves and returns a set of files with the desired paths.
+#' @export
+#' @examples
+#' camsizerxle(path,outpath,outfile)
+
 ##	converting CAMSIZER .xle file to csv and reading into Rdata form
 ##	Eric Barefoot
 ##	June 2017
