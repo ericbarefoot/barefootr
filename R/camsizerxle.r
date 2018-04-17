@@ -10,23 +10,23 @@
 
 # require(tools)
 
-args = commandArgs(trailingOnly = T)
-
-path = args[1]
-
-if (length(args)==0) {
-	stop("At least one argument must be supplied. Input file(s) path", call.=FALSE)
-} else if (length(args)==1) {
-	# default output path
-	args[2] = path
-	args[3] = 'data.rda'
-} else if (length(args)==2) {
-	args[3] = 'data.rda'
-}
-
-outpath = args[2]
-
-outfile = args[3]
+# args = commandArgs(trailingOnly = T)
+#
+# path = args[1]
+#
+# if (length(args)==0) {
+# 	stop("At least one argument must be supplied. Input file(s) path", call.=FALSE)
+# } else if (length(args)==1) {
+# 	# default output path
+# 	args[2] = path
+# 	args[3] = 'data.rda'
+# } else if (length(args)==2) {
+# 	args[3] = 'data.rda'
+# }
+#
+# outpath = args[2]
+#
+# outfile = args[3]
 
 camsizerxle = function(path, outpath, outfile) {
 
