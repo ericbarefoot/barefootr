@@ -2,6 +2,7 @@
 
 export(H2h)
 export(azStringConvert)
+export(camsizerxle)
 export(lynds_one)
 export(lynds_three)
 export(lynds_two)
