@@ -80,7 +80,7 @@ camsizerxle = function(path, outpath, outfile) {
 
 }
 
-camsizerxle(path,outpath,outfile)
+# camsizerxle(path,outpath,outfile)
 
 
 
