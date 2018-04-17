@@ -1,31 +1,31 @@
 # distances between points with nearest neighbor approx
 
 
-x = c(1,2,3,4,5,6,7,8,9)
-y = c(1,2,3,4,5,6,7,8,9)
-
-a = x + 2
-b = y * 2
-
-all = c(a,b,x,y)
-plot(a,b,pch = 20, ylim = c(min(all), max(all)), xlim = c(min(all), max(all)), asp = 1)
-points(x,y,pch = 20, col = 'red')
-
-
-X = cbind(x,y)
-A = cbind(a,b)
+# x = c(1,2,3,4,5,6,7,8,9)
+# y = c(1,2,3,4,5,6,7,8,9)
+#
+# a = x + 2
+# b = y * 2
+#
+# all = c(a,b,x,y)
+# plot(a,b,pch = 20, ylim = c(min(all), max(all)), xlim = c(min(all), max(all)), asp = 1)
+# points(x,y,pch = 20, col = 'red')
+#
+#
+# X = cbind(x,y)
+# A = cbind(a,b)
 
 
 
 nearest_xy = function(A,X,to = 1, plot = F) {
-	
+
 	Z = as.matrix(dist(rbind(X,A)))
 
 	aseq = ((length(x)+1):length(c(x,a))); xseq = (1:(length(x)))
 
 	Z = Z [ aseq , xseq ]
 
-	# so now have distances between every point in each xy dataset. now pick which set to choose the nearest neighbor 
+	# so now have distances between every point in each xy dataset. now pick which set to choose the nearest neighbor
 
 	# if the A dataset is the one to match to...
 	if (to == 1) {
@@ -74,6 +74,3 @@ nearest_xy = function(A,X,to = 1, plot = F) {
 		segments(T[,1], T[,2],T[,3], T[,4], col = 'red3', lty = 3)
 	}
 }
-
-
-
